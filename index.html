@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURELIO — Ресторан высокой кухни</title>
+  <meta name="description" content="AURELIO — авторская кухня, бронирование столиков и доставка премиальных блюд. Ресторан высокой кухни в Москве." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <script src="js/loader.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "AURELIO",
+    "servesCuisine": ["Итальянская", "Авторская кухня"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Тверская, 12",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "telephone": "+7 (495) 000-00-00",
+    "openingHours": "Mo-Su 12:00-00:00",
+    "priceRange": "$$$$"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <span class="loader__logo">AURELIO</span>
+    <span class="loader__sub">Restaurant</span>
+    <span class="loader__line"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#home" class="logo">
+        <span class="logo__main">AURELIO</span>
+        <span class="logo__sub">Restaurant</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link is-active">Главная</a>
+        <a href="menu.html" class="nav__link">Меню</a>
+        <a href="about.html" class="nav__link">О ресторане</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <a href="account.html" class="profile-link" aria-label="Личный кабинет">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </a>
+
+      <a href="#booking" class="btn btn--gold header__btn">Забронировать стол</a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content container">
+      <p class="hero__label">AURELIO — Ресторан высокой кухни</p>
+      <h1 class="hero__title">
+        <span class="hero__line"><span>Искусство вкуса</span></span>
+        <span class="hero__line"><span>в каждой детали</span></span>
+      </h1>
+      <p class="hero__desc">
+        AURELIO — это гастрономическое путешествие, где каждое блюдо
+        создано с любовью к традициям и современному вкусу.
+      </p>
+      <div class="hero__actions">
+        <a href="#booking" class="btn btn--gold btn--lg">Забронировать стол</a>
+        <a href="menu.html" class="btn btn--ghost btn--lg">Открыть меню</a>
+      </div>
+
+      <div class="hero__features">
+        <div class="feature">
+          <span class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12l3-3m-3 3 3 3M8 5h13a1 1 0 0 1 1 1v5H8a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>
+          </span>
+          <div class="feature__text">
+            <span class="feature__title">Авторская кухня</span>
+            <span class="feature__desc">Изысканные блюда от нашего шеф-повара</span>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C7 17 4 13.5 4 9.5A5.5 5.5 0 0 1 12 7a5.5 5.5 0 0 1 8 2.5C20 13.5 17 17 12 21z"/></svg>
+          </span>
+          <div class="feature__text">
+            <span class="feature__title">Свежие продукты</span>
+            <span class="feature__desc">Отборные ингредиенты со всего мира</span>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 3 3 6 0 9-3-3-3-6 0-9zM12 12c3 3 3 6 0 9-3-3-3-6 0-9z"/></svg>
+          </span>
+          <div class="feature__text">
+            <span class="feature__title">Атмосфера</span>
+            <span class="feature__desc">Уют, роскошь и безупречный сервис</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Прокрутить вниз">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <p class="label">О нас</p>
+        <h2 class="title">Больше,<br />чем ресторан</h2>
+        <p class="about__desc">
+          AURELIO — это место, где традиции кухни соединяются
+          с современным подходом.
+        </p>
+        <a href="about.html" class="link-more">Узнать больше
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="about__media">
+        <div class="about__img" data-parallax>
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Интерьер ресторана AURELIO" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dishes section" id="menu">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="title title--center">Блюда,<br />которые впечатляют</h2>
+        <p class="section__sub">Гастрономия созданная нашим шефом</p>
+      </div>
+
+      <div class="dishes__grid">
+        <article class="dish">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Стейк Рибай" loading="lazy" />
+          </div>
+          <div class="dish__body">
+            <div class="dish__row">
+              <h3 class="dish__name">Стейк Рибай</h3>
+              <span class="dish__price">4 900 ₽</span>
+            </div>
+            <p class="dish__desc">Мраморная говядина, трюфельное пюре, соус демиглас</p>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Тальятелле с трюфелем" loading="lazy" />
+          </div>
+          <div class="dish__body">
+            <div class="dish__row">
+              <h3 class="dish__name">Тальятелле с трюфелем</h3>
+              <span class="dish__price">2 400 ₽</span>
+            </div>
+            <p class="dish__desc">Домашняя паста, чёрный трюфель, сливочный соус</p>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Салат с грейпфрутом" loading="lazy" />
+          </div>
+          <div class="dish__body">
+            <div class="dish__row">
+              <h3 class="dish__name">Салат с грейпфрутом</h3>
+              <span class="dish__price">1 400 ₽</span>
+            </div>
+            <p class="dish__desc">Свежая зелень, грейпфрут, козий сыр, орехи</p>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Шоколадный фондан" loading="lazy" />
+          </div>
+          <div class="dish__body">
+            <div class="dish__row">
+              <h3 class="dish__name">Шоколадный фондан</h3>
+              <span class="dish__price">950 ₽</span>
+            </div>
+            <p class="dish__desc">Тёмный шоколад, ванильное мороженое, малина</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="dishes__more">
+        <a href="menu.html" class="btn btn--outline">Смотреть полное меню</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="chef section" id="events">
+    <div class="chef__bg"></div>
+    <div class="chef__overlay"></div>
+    <div class="container chef__inner">
+      <div class="chef__content">
+        <p class="label label--gold">Наша кухня</p>
+        <h2 class="title">Мастерство<br />в каждом блюде</h2>
+        <p class="chef__desc">
+          Каждое блюдо — это история. Мы соединяем итальянские традиции
+          с современными техниками высокой кухни.
+        </p>
+        <a href="about.html" class="btn btn--gold">Смотреть процесс</a>
+      </div>
+      <button class="chef__play" aria-label="Смотреть видео">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="gallery section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="title title--center">Атмосфера,<br />в которую хочется возвращаться</h2>
+      </div>
+
+      <div class="gallery__grid">
+        <a class="gallery__item" href="#">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Зал ресторана" loading="lazy" />
+          <span class="gallery__caption">Главный зал</span>
+        </a>
+        <a class="gallery__item" href="#">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Винный погреб" loading="lazy" />
+          <span class="gallery__caption">Винный погреб</span>
+        </a>
+        <a class="gallery__item" href="#">
+          <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=800&q=80" alt="Сервировка блюд" loading="lazy" />
+          <span class="gallery__caption">Подача блюд</span>
+        </a>
+        <a class="gallery__item" href="#">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Вечерняя атмосфера" loading="lazy" />
+          <span class="gallery__caption">Вечерняя атмосфера</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking section" id="booking">
+    <div class="container">
+      <div class="booking__card">
+        <div class="booking__head">
+          <h2 class="title">Забронировать столик</h2>
+          <p class="booking__sub">Заполните форму и мы подтвердим вашу бронь</p>
+        </div>
+        <form class="booking__form" id="bookingForm">
+          <label class="field">
+            <span class="field__label">Дата</span>
+            <input type="date" name="date" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Время</span>
+            <input type="time" name="time" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Гости</span>
+            <select name="guests">
+              <option>1 гость</option>
+              <option selected>2 гостя</option>
+              <option>3 гостя</option>
+              <option>4 гостя</option>
+              <option>5+ гостей</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label">Имя</span>
+            <input type="text" name="name" placeholder="Ваше имя" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input type="tel" name="phone" id="bookingPhone" placeholder="+7 (___) ___-__-__" required />
+          </label>
+          <button type="submit" class="btn btn--gold booking__submit">Забронировать</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo">
+          <span class="logo__main">AURELIO</span>
+          <span class="logo__sub">Restaurant</span>
+        </a>
+        <p class="footer__tagline">Высокая кухня. Безупречный сервис.<br />Атмосфера, в которую хочется возвращаться.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О ресторане</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li>Москва, ул. Тверская, 12</li>
+          <li><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a href="mailto:info@aurelio.ru">info@aurelio.ru</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Время работы</h4>
+        <ul class="footer__list">
+          <li>Пн–Вс</li>
+          <li>12:00 — 00:00</li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 3 10l5 2 2 6 3-4 5 4z"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="VK">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h3c.5 6 2.5 9 5 9 1.5 0 2-1 2-3V8c0-1 .5-1.5 1-1.5h3c.5 0 1 .5 1 1v5c0 2-1 3-2 3s-2-.5-2-.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Aurelio Restaurant</span>
+      <span>Все права защищены</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

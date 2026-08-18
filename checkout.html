@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оформление заказа — AURELIO Restaurant</title>
+  <meta name="description" content="Оформление заказа в ресторане AURELIO — доставка премиальных блюд по Москве. Быстрое и безопасное оформление заказа." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/checkout.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <script src="js/loader.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "AURELIO",
+    "telephone": "+7 (495) 000-00-00"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <span class="loader__logo">AURELIO</span>
+    <span class="loader__sub">Restaurant</span>
+    <span class="loader__line"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="index.html" class="logo">
+        <span class="logo__main">AURELIO</span>
+        <span class="logo__sub">Restaurant</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="menu.html" class="nav__link">Меню</a>
+        <a href="about.html" class="nav__link">О ресторане</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <a href="account.html" class="profile-link" aria-label="Личный кабинет">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </a>
+
+      <button class="cart is-active" aria-label="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 12.2A2 2 0 0 0 9.4 18h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+        <span class="cart__count" id="cartCount">3</span>
+      </button>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="checkout">
+    <div class="checkout__head container">
+      <p class="checkout__label">Aurelio Delivery</p>
+      <h1 class="checkout__title">Оформление заказа</h1>
+      <p class="checkout__sub">Заполните данные для доставки</p>
+    </div>
+
+    <div class="steps container">
+      <div class="steps__item is-active">
+        <span class="steps__dot">1</span>
+        <span class="steps__label">Доставка</span>
+      </div>
+      <span class="steps__line is-active"></span>
+      <div class="steps__item">
+        <span class="steps__dot">2</span>
+        <span class="steps__label">Оплата</span>
+      </div>
+      <span class="steps__line"></span>
+      <div class="steps__item">
+        <span class="steps__dot">3</span>
+        <span class="steps__label">Готово</span>
+      </div>
+    </div>
+
+    <div class="checkout__grid container">
+      <div class="checkout__form">
+        <section class="form-card">
+          <h3 class="form-card__title">Адрес доставки</h3>
+          <div class="grid grid--2">
+            <label class="field">
+              <input type="text" name="city" placeholder=" " />
+              <span class="field__label">Город</span>
+            </label>
+            <label class="field">
+              <input type="text" name="street" placeholder=" " />
+              <span class="field__label">Улица и дом</span>
+            </label>
+            <label class="field">
+              <input type="text" name="house" placeholder=" " />
+              <span class="field__label">Дом</span>
+            </label>
+            <label class="field">
+              <input type="text" name="flat" placeholder=" " />
+              <span class="field__label">Квартира</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h3 class="form-card__title">Время доставки</h3>
+          <div class="delivery">
+            <label class="option is-active">
+              <input type="radio" name="delivery" value="asap" checked />
+              <span class="option__radio"></span>
+              <span class="option__text">Как можно скорее</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="delivery" value="time" />
+              <span class="option__radio"></span>
+              <span class="option__text">К определенному времени</span>
+            </label>
+            <label class="field field--time" id="timeField" hidden>
+              <span class="field__label">Время</span>
+              <input type="time" name="deliveryTime" value="18:00" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h3 class="form-card__title">Контактные данные</h3>
+          <div class="grid grid--2">
+            <label class="field">
+              <input type="text" name="name" placeholder=" " />
+              <span class="field__label">Ваше имя</span>
+            </label>
+            <label class="field">
+              <input type="tel" name="phone" placeholder=" " />
+              <span class="field__label">Телефон</span>
+            </label>
+          </div>
+          <label class="field">
+            <input type="email" name="email" placeholder=" " />
+            <span class="field__label">Email</span>
+          </label>
+        </section>
+
+        <section class="form-card">
+          <h3 class="form-card__title">Комментарий</h3>
+          <label class="field field--static">
+            <span class="field__label">Комментарий к заказу</span>
+            <textarea class="textarea" name="comment" placeholder="Например: позвонить перед доставкой"></textarea>
+          </label>
+        </section>
+      </div>
+
+      <aside class="order" id="order">
+        <div class="order__head">
+          <h3 class="order__title">Ваш заказ</h3>
+          <span class="order__count" id="orderCount">3 блюда</span>
+        </div>
+
+        <div class="order__items" id="orderItems"></div>
+
+        <div class="order__divider"></div>
+
+        <div class="order__sum">
+          <div class="order__row"><span>Стоимость блюд</span><span id="subtotal">5 800 ₽</span></div>
+          <div class="order__row" id="discountRow" hidden><span>Скидка</span><span id="discount" class="order__discount">−580 ₽</span></div>
+          <div class="order__row"><span>Доставка</span><span id="delivery">300 ₽</span></div>
+          <div class="order__row order__row--total"><span>Итого</span><span id="total">6 100 ₽</span></div>
+        </div>
+
+        <div class="order__promo">
+          <input type="text" id="promoInput" placeholder="Введите промокод" />
+          <button class="order__promo-btn" id="promoBtn">Применить</button>
+        </div>
+
+        <button class="btn btn--gold order__submit" id="submitBtn">Оформить заказ</button>
+
+        <p class="order__trust">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Ваши данные защищены
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <span class="logo__main">AURELIO</span>
+          <span class="logo__sub">Restaurant</span>
+        </a>
+        <p class="footer__tagline">Высокая кухня. Безупречный сервис.<br />Атмосфера, в которую хочется возвращаться.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="about.html">О ресторане</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li>Москва, ул. Тверская, 12</li>
+          <li><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a href="mailto:info@aurelio.ru">info@aurelio.ru</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Время работы</h4>
+        <ul class="footer__list">
+          <li>Пн–Вс</li>
+          <li>12:00 — 00:00</li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 3 10l5 2 2 6 3-4 5 4z"/></svg>
+          </a>
+          <a href="#" class="social" aria-label="VK">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h3c.5 6 2.5 9 5 9 1.5 0 2-1 2-3V8c0-1 .5-1.5 1-1.5h3c.5 0 1 .5 1 1v5c0 2-1 3-2 3s-2-.5-2-.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Aurelio Restaurant</span>
+      <span>Все права защищены</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
